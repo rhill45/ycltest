@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery Mobile page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/jqmob_themes.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header" data-position="fixed" data-theme="e" > 
+  <a href="#" data-role="button" data-icon="bars" data-iconpos="notext"></a>
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+    <div class="content-primary">
+      <ul data-role="listview" data-inset="true" data-theme="b">
+        <li data-role="fieldcontain">
+          <form>
+            <a href="#" data-role="button" data-icon="bars" data-inline="true">Create New Storage System</a>
+          </form>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true" data-theme="c">
+        <li data-role="fieldcontain" >
+          <form>
+            <label for="textinput" class="ui-hidden-accessible" >Email</label>
+            <input type="text" name="textinput" id="textinput" value="" placeholder="Email" />
+            
+            <label for="passwordinput" class="ui-hidden-accessible">Password</label>
+            <input type="password" name="passwordinput" id="passwordinput" value="" placeholder="Password" />
+            <br></br>
+            <a href="#" data-role="button" data-icon="home" data-inline="true">Login</a>
+            
+            <label for="flipswitch" class="ui-hidden-accessible">Stay Logged In</label>
+            <select  name="flipswitch" id="flipswitch" data-role="slider" data-inline="true" >
+              <option value="yes">yes</option>
+              <option value="no">No</option>
+            </select>
+          </form>
+        </li>
+      </ul>
+      <ul data-role="listview" data-inset="true" data-theme="d">
+        <li data-role="fieldcontain">
+          <form>
+            <label for="textinput2" class="ui-hidden-accessible" >Authorization Code</label>
+            <input type="text" name="textinput2" id="textinput2" value="" placeholder="Authorization code"  />
+            <br></br>
+            <a href="#" data-role="button" data-icon="star" data-inline="true">Accept Invitation</a>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="="footermain">
+    <div data-role="navbar" data-iconpos="bottom">
+      <ul>
+        <li><a href="#" data-role="button" data-icon="home">Start Page<br></br></a></li>
+        <li><a href="#" data-role="button" data-icon="edit">Review in<br>Appstore</a></li>
+        <li><a href="#" data-role="button" data-icon="email">Request<br>Feature</a></li>
+        <li><a href="#" data-role="button" data-icon="info">Help<br></br></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

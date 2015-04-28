@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.frozencloud.freezerbase"
+        versionCode = "10" 
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Freezerbase</name>
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+	<gap:platform name="winphone" />
+
+    <description>
+        Application to construct cataloging and orginational position based databases. 
+    </description>
+
+    <author href="https://frozencloud.com" email="robert108@usf.edu">
+        Robert Hill
+    </author>
+
+</widget>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<title>Freezerbase</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/freezerbase.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="phonegap.js"></script>
+
+</head>
+<body>
+<!-- home -->
+<div data-role="page" id="home">
+  <div data-role="header" data-position="fixed">
+    <h1>Welcome!</h1>
+    <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a> <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a> </div>
+  <div data-role="main" class="ui-content">
+    <div class="main-primary"> <br>
+      <br>
+      <fieldset class="ui-grid-a" align="center">
+        <div class="ui-block-a"><a style="white-space:normal;" data-iconpos="bottom" class="custom-btn" href="#login" data-role="button" data-icon="plus" data-inline="true" data-theme="b">
+          <h3>New Storage System</h3>
+          </a></div>
+        <div class="ui-block-b"><a style="white-space:normal;" data-iconpos="bottom" class="custom-btn" href="#login" data-role="button" data-icon="user" data-inline="true" data-theme="b">
+          <h3>Log In</h3>
+          </a></div>
+      </fieldset>
+      <br>
+      <br>
+      <fieldset class="ui-grid-a" align="center">
+        <div class="ui-block-a"><a style="white-space:normal;" data-iconpos="bottom" class="custom-btn" href="#start" data-role="button" data-icon="eye" data-inline="true"data-theme="b">
+          <h3>Join Storage System</h3>
+          </a></div>
+        <div class="ui-block-b"><a style="white-space:normal;" data-iconpos="bottom" class="custom-btn" href="#start" data-role="button" data-icon="info" data-inline="true"data-theme="b">
+          <h3>Help</h3>
+          </a></div>
+      </fieldset>
+    </div>
+  </div>
+  <fieldset>
+    <div data-role="footer"  data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-role="button" data-rel="back" data-icon="arrow-l" data-theme="b">Back</a></li>
+          <li><a href="#" data-role="button" data-icon="mail" data-theme="b">Contact</a></li>
+          <li><a href="#" data-role="button" data-icon="info" data-theme="b">Help</a></li>
+          <li><a href="#" data-role="button" data-icon="arrow-r" data-theme="b">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<!--Log In-->
+<div data-role="page" id="login">
+  <div data-role="header" data-position="fixed">
+    <h1>Log In</h1>
+    <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a> <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a> </div>
+  <div data-role="main" class="ui-content">
+    <div class="main-primary"> <br>
+      <br>
+      <h3>Already Have an account?</h3>
+      <div class="ui-field-contain">
+        <form method="post" action="php/login.php">
+          <label for="textinput" class="ui-hidden-accessible" >Email</label>
+          <input type="text" name="textinput" id="email1" autofocus value="" placeholder="Email" />
+          <label for="password" class="ui-hidden-accessible">Password</label>
+          <input type="password" name="passwordf" id="passwordf" value="" placeholder="Password" />
+          <div class="ui-grid-a">
+            <label for="submit-l" class="ui-hidden-accessible">Log in</label>
+            <button type="submit" data-theme="b" id="submit-l">Log in</button>
+            <div class="ui-block-a">
+              <label for="flip-3">Remember me:</label>
+              <select name="flip-3" id="flip-3" data-role="flipswitch" data-mini="true" data-theme="b">
+                <option value="no">No</option>
+                <option value="yes" selected="">Yes</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <br>
+      <h2>New to Freezerbase?</h2>
+      <div class="ui-field-contain">
+        <div class="ui-block-b"> <a href="#register" data-role="button" data-theme="b" data-icon="user" data-rel="dialog" data-transition="pop" >Register</a> </div>
+      </div>
+    </div>
+  </div>
+  <fieldset>
+    <div data-role="footer"  data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-role="button" data-rel="back" data-icon="arrow-l" data-theme="b">Back</a></li>
+          <li><a href="#" data-role="button" data-icon="mail" data-theme="b">Contact</a></li>
+          <li><a href="#" data-role="button" data-icon="info" data-theme="b">Help</a></li>
+          <li><a href="#" data-role="button" data-icon="arrow-r" data-theme="b">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<!--Registration-->
+<div data-role="page" id="register">
+  <div data-role="header" data-theme="b">
+    <h1>Register</h1>
+  </div>
+  <!-- /header -->
+  
+  <div role="main" class="ui-content">
+    <div class="ui-field-contain">
+      <form name="register" method="post" action="php/register.php">
+        <label  for="first_name" class="ui-hidden-accessible" autofocus >First Name*</label>
+        <input name="first_name" type="text" id="first_name" placeholder="First Name" />
+        <label for="last_name" class="ui-hidden-accessible" >Last Name*</label>
+        <input name="last_name" type="text" id="last_name" placeholder="Last Name" />
+        <label for="email_address" class="ui-hidden-accessible" >Email*</label>
+        <input name="email_address" type="text" id="email_address" placeholder="Email" />
+        <label for="psswrd1" class="ui-hidden-accessible" >Desired Password*</label>
+        <input name="psswrd1" type="text" id="txtNewPassword" placeholder="Desired Password" />
+        <div style="color:#000000" id="divCheckPasswordMatch"></div>
+        <label for="psswrd2" class="ui-hidden-accessible" >Re-enter password*</label>
+        <input name="psswrd2" type="text" id="txtConfirmPassword" onChange="checkPasswordMatch()" placeholder="Reenter password" />
+        <label for="submit-l" class="ui-hidden-accessible">Register</label>
+        <button type="submit" id="submit-l" data-theme="b">Register</button>
+        <input name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" type="checkbox">
+        <label for="checkbox-mini-0">May we contact you with special offers?</label>
+      </form>
+      <script>$("#first_name").val($("#target option:first").val());</script> 
+      <script>function checkPasswordMatch() {
+    var password = $("#txtNewPassword").val();
+    var confirmPassword = $("#txtConfirmPassword").val();
+
+    if (password != confirmPassword)
+        $("#divCheckPasswordMatch").html("Passwords do not match!").css("color","#E75658");
+    else
+        $("#divCheckPasswordMatch").html("Passwords match.").css("color","#40C935");
+}
+$(document).ready(function () {
+   $("#txtConfirmPassword").keyup(checkPasswordMatch);
+});</script> 
+    </div>
+  </div>
+</div>
+</body>
+</html>
